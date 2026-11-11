@@ -1,1 +1,5 @@
-# cachyos_post_setup
+# Post-Setup App Installation
+
+```bash
+bash post_setup.sh
+```
