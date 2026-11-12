@@ -1,4 +1,3 @@
-
 echo "=========================================="
 echo "== Install Common Apps                  =="
 echo "=========================================="
@@ -22,16 +21,15 @@ paru -S --noconfirm fcitx5 fcitx5-configtool fcitx5-rime rime-luna-pinyin fcitx5
 paru -S --noconfirm zoom plasma-camera obs-studio openboard
 paru -S --noconfirm rclone github-desktop btop htop 7zip goldendict-ng globus-connect-personal rustdesk-bin localsend cliamp-bin
 # install texmaths for libreoffice
-cd ~/Downloads
 wget -O TexMaths.oxt https://extensions.libreoffice.org/assets/downloads/1236/1772387337/TexMaths-0.52.6.oxt
-unopkg add ~/Downloads/TexMaths.oxt
-rm ~/Downloads/TexMaths.oxt
+unopkg add ./TexMaths.oxt
+rm ./TexMaths.oxt
 # set up wps-zotero
-cd ~/Downloads
 git clone https://github.com/RajaSunrise/wps-zotero.git
 cd wps-zotero
 python3 install.py
 python3 proxy.py
+cd ..
 
 # config firewall for localsend
 sudo ufw allow 53317/tcp
@@ -42,9 +40,16 @@ echo "=========================================="
 echo "== Set Up Box via rclone                =="
 echo "==    Follow the instructions             "
 echo "=========================================="
+mkdir ~/bin
+mkdir ~/Box
+cp ./boxmount ~/bin
+cp ./boxunmount ~/bin
+chmod +x ~/bin/boxmount
+chmod +x ~/bin/boxunmount
 read -r -s -n 1 -P "Press any key to continue..."
 # set up Box via rclone
 rclone config
+
 
 echo "=========================================="
 echo "== Set Up Chinese Input Method          =="
@@ -56,7 +61,13 @@ read -r -s -n 1 -P "When 2) is completed, press any key to continue..."
 # set up Chinese Input Method
 vim ~/.local/share/fcitx5/rime/build/luna_pinyin.schema.yaml
 
-
+echo "=========================================="
+echo "== Set Up Zotero Profile (manually)     =="
+echo "==    1) open Zotero and quit"
+echo "==    2) copy and paste profile file and folder into ~/.zotero/zotero/"
+echo "==    1) open Zotero again and sync"
+echo "=========================================="
+read -r -s -n 1 -P "Press any key to continue..."
 
 echo "=========================================="
 echo "=============    DONE   =================="
