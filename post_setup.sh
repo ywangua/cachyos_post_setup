@@ -21,7 +21,11 @@ paru -S --noconfirm fcitx5 fcitx5-configtool fcitx5-rime rime-luna-pinyin fcitx5
 # other apps / utils
 paru -S --noconfirm zoom plasma-camera obs-studio openboard
 paru -S --noconfirm rclone github-desktop btop htop 7zip goldendict-ng globus-connect-personal rustdesk-bin localsend cliamp-bin
-
+# install texmaths for libreoffice
+cd ~/Downloads
+wget -O TexMaths.oxt https://extensions.libreoffice.org/assets/downloads/1236/1772387337/TexMaths-0.52.6.oxt
+unopkg add ~/Downloads/TexMaths.oxt
+rm ~/Downloads/TexMaths.oxt
 # set up wps-zotero
 cd ~/Downloads
 git clone https://github.com/RajaSunrise/wps-zotero.git
