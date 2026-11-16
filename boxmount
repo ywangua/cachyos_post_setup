@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+rclone mount box:/ ~/Box --vfs-cache-mode full --transfers 10 --daemon
