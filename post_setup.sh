@@ -9,7 +9,7 @@ paru -Syu
 # install google chrome
 paru -S --noconfirm google-chrome
 # install apps for writing
-paru -S --noconfirm libreoffice-fresh jdk-openjdk visual-studio-code-bin zotero quarto-cli typst texlive-basic texlive-latex wps-office-cn ttf-fangzheng ttf-ms-fonts hunspell hunspell-en_us espanso-wayland
+paru -S --noconfirm libreoffice-fresh jdk-openjdk visual-studio-code-bin zotero quarto-cli typst texlive-basic texlive-latex texlive-latexextra wps-office-cn ttf-fangzheng ttf-ms-fonts hunspell hunspell-en_us espanso-wayland
 # install apps for figure/image processing/preparing
 paru -S --noconfirm gimp inkscape fiji-bin
 # install apps for coding/data analysis
