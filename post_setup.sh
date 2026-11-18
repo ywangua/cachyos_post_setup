@@ -20,6 +20,9 @@ paru -S --noconfirm fcitx5 fcitx5-configtool fcitx5-rime rime-luna-pinyin fcitx5
 # other apps / utils
 paru -S --noconfirm zoom plasma-camera obs-studio openboard
 paru -S --noconfirm rclone github-desktop btop htop 7zip goldendict-ng globus-connect-personal rustdesk-bin localsend cliamp-bin
+# printer support
+paru -S --noconfirm cups cups-filters cups-pdf print-manager system-config-printer
+sudo systemctl enable --now cups.service
 # install texmaths for libreoffice
 wget -O TexMaths.oxt https://extensions.libreoffice.org/assets/downloads/1236/1772387337/TexMaths-0.52.6.oxt
 unopkg add ./TexMaths.oxt
